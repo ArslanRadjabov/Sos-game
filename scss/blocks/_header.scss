@@ -1,0 +1,124 @@
+
+.header {
+    max-width: 100%;
+    
+}
+.header__lang{
+    display: flex;
+    flex-direction: row;
+}
+.header__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:baseline;
+    padding: 10px 0;
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+.header__list {
+    display: flex;
+    list-style: none;  
+}   
+.header__link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    &:hover{
+        color: rgb(231, 226, 226);
+    }
+}
+.header__lang{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.lang-text{
+    cursor: pointer;
+    margin: 0;
+    color: #fff;
+}
+.bx{
+    color: #fff;
+    &:hover{
+        color:  rgb(240, 163, 20);
+    }
+}
+.header__xbox{
+    margin-right: 10px;
+}
+.header__online{
+    margin-left: 20px;
+}
+.header__menu{
+    display: none;
+    
+    .bx-menu{
+        margin-left: 10px;
+        font-size: 30px;
+    }
+}
+.header__socials{
+    align-items: center;
+}
+.dropdown-menu{
+    background-color: #000;
+    width: 20px;
+    a{
+        color:  #FFB548;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .header__menu{
+        z-index: 999;
+    }
+    .header__menu{
+        display: block;
+    }
+    .header__nav{
+        position: fixed;
+        top: 0;
+        right: -150%;
+        width: 60%;
+        min-height: 100vh;
+        background-color: #e7a109bd;
+        display: flex;
+        
+        z-index: 500;
+        transition: all ease 0.5s;
+      }
+    .header__list{
+        gap: 50px;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__link{
+        font-size: 18px;
+        text-align: center;
+    }
+    .header__xbox{
+        display: none;
+    }
+    .header__steam{
+        display: none;
+    }
+
+}
+.show{
+    right: 0px;
+  }
